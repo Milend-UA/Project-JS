@@ -1,5 +1,6 @@
 const urlParams = new URLSearchParams(window.location.search);
 let postId = urlParams.get('postId');
+
 fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
     .then(response => response.json())
     .then(post => {
@@ -10,7 +11,7 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
             <p><strong>Title:</strong> ${post.title}</p>
             <p><strong>Body:</strong> ${post.body}</p>
         `;
-    })
+    });
 
 fetch(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`)
     .then(response => response.json())
@@ -21,10 +22,12 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`)
             let commentBlock = document.createElement('div');
             commentBlock.className = 'comment-block';
             commentBlock.innerHTML = `
+                <p><strong>Post ID:</strong> ${comment.postId}</p>
+                <p><strong>Comment ID:</strong> ${comment.id}</p>
                 <p><strong>Name:</strong> ${comment.name}</p>
                 <p><strong>Email:</strong> ${comment.email}</p>
                 <p><strong>Comment:</strong> ${comment.body}</p>
             `;
             commentsContainer.appendChild(commentBlock);
         });
-    })
+    });
