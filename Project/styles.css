@@ -14,6 +14,11 @@ body {
 h1, h2, h3 {
     color: #333;
 }
+h1 {
+    text-align: center;
+    margin: 0;
+
+}
 
 .user-block, .post-block, .comment-block {
     background-color: #fff;
@@ -53,19 +58,26 @@ h1, h2, h3 {
 
 /* Стили для user-details.html */
 #user-details {
-    margin: 0 auto 20px auto; /* Центрирование блока */
-    padding: 20px;
+    margin: 0 auto 20px auto;
+    padding: 15px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 600px; /* Ограничение максимальной ширины блока */
-    width: 100%; /* Блок занимает всю ширину до максимальной */
+    max-width: 800px;
+    width: 100%;
 }
+
+#user-details p {
+    margin: 5px 0;
+    line-height: 1.2;
+    font-size: 14px;
+}
+
 
 #load-posts {
     display: block;
-    width: 90%; /* Ширина кнопки 90% от ширины контейнера */
-    margin: 20px auto; /* Центрирование кнопки по горизонтали и добавление отступа сверху */
+    width: 90%;
+    margin: 20px auto;
     padding: 15px;
     background-color: #28a745;
     color: #fff;
@@ -81,8 +93,8 @@ h1, h2, h3 {
 
 #posts-container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 колонок одинаковой ширины */
-    gap: 10px; /* Отступы между блоками */
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
 }
 
 .post-block {
@@ -91,8 +103,10 @@ h1, h2, h3 {
     border: 1px solid #ddd;
     border-radius: 5px;
     box-sizing: border-box;
-    text-align: center; /* Центрирование текста внутри блока */
+    text-align: center;
 }
+
+
 
 /* Стили для post-details.html */
 #post-details {
@@ -105,7 +119,7 @@ h1, h2, h3 {
 
 #comments-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 колонки одинаковой ширины */
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
 }
 
