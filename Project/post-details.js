@@ -1,4 +1,4 @@
-const urlParams = new URLSearchParams(window.location.search);
+let urlParams = new URLSearchParams(window.location.search);
 let postId = urlParams.get('postId');
 
 fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
