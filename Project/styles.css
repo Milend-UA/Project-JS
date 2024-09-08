@@ -54,7 +54,9 @@ h1 {
 
 .user-block a:hover {
     background-color: #0056b3;
+    transition: background-color 0.3s ease;
 }
+
 
 /* Стили для user-details.html */
 #user-details {
@@ -89,6 +91,7 @@ h1 {
 
 #load-posts:hover {
     background-color: #218838;
+    transition: background-color 0.3s ease;
 }
 
 #posts-container {
@@ -129,4 +132,7 @@ h1 {
     border: 1px solid #ddd;
     border-radius: 5px;
     box-sizing: border-box;
+}
+#comments-header {
+    text-align: center;
 }
